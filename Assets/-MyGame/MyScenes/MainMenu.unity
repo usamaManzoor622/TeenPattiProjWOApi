@@ -3203,14 +3203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca6157560b5b7341a2579cfd47d97f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FriendDetailField: {fileID: 0}
-  FriendRequestField: {fileID: 0}
-  SearchedFriendField: {fileID: 0}
-  friendSearchInputField: {fileID: 0}
-  FriendListPanel: {fileID: 0}
-  FriendsTDFieldsList: []
-  otherPlayerPlayerID: 
-  FriendsRequestsTDFieldsList: []
 --- !u!1 &34265570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3792,7 +3784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &39570644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31368,7 +31360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &406074532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38659,6 +38651,7 @@ GameObject:
   - component: {fileID: 524095258}
   - component: {fileID: 524095260}
   - component: {fileID: 524095259}
+  - component: {fileID: 524095261}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -38723,6 +38716,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524095257}
   m_CullTransparentMesh: 1
+--- !u!114 &524095261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524095257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 524095259}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &526891563
 GameObject:
   m_ObjectHideFlags: 0
@@ -58056,7 +58093,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.85
+  m_fontSize: 20.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -67961,15 +67998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac0ea0bfee17fe458cfe6810c7a3a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmailpanelWhole: {fileID: 0}
-  NoMoreEmailsIcon: {fileID: 0}
-  EmailsBox: {fileID: 0}
-  EmailListItem: {fileID: 0}
-  EmailDetailpanel: {fileID: 0}
-  EmailDate: {fileID: 0}
-  DetailEmailText: {fileID: 0}
-  AmountToCollect: {fileID: 0}
-  EmailListList: []
 --- !u!1 &959872939
 GameObject:
   m_ObjectHideFlags: 0
@@ -88520,18 +88548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9ef621c33b2d54d9be930ce4d1e90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainParentGoldProtectionPanel: {fileID: 0}
-  GoldProtectionPanel: {fileID: 0}
-  GoldProtectionInstructionPanel: {fileID: 0}
-  GoldProtectionSetPasswordPanel: {fileID: 0}
-  GoldProtectionRemovePasswordPanel: {fileID: 0}
-  GoldAccessPanel: {fileID: 0}
-  GoldProtectionOnBtn: {fileID: 0}
-  AccountSecurityStatusBtn: {fileID: 0}
-  Password1: {fileID: 0}
-  Password2: {fileID: 0}
-  RemovePasswordInputField: {fileID: 0}
-  PasswordToContinueInputField: {fileID: 0}
 --- !u!1 &1264025518
 GameObject:
   m_ObjectHideFlags: 0
@@ -118427,32 +118443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7260c6a503a06c7418d5ef98a5e492d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PendingStatustxt: {fileID: 0}
-  ReceiverNameTxt: {fileID: 0}
-  ReceiverIDTxt: {fileID: 0}
-  ReceiverAmountTxt: {fileID: 0}
-  DateAndTimeTxt: {fileID: 0}
-  ReceiverImage: {fileID: 0}
-  reCallIcon: {fileID: 0}
-  ResendSprite: {fileID: 0}
-  recallSprite: {fileID: 0}
-  Colors: []
-  status: 
-  playerName: 
-  PlayerID: 
-  sentAmount: 
-  cancelIDToGetBackGold: 0
-  senderName: 
-  senderID: 
-  receiverName: 
-  receiverID: 
-  sentOrReceivedAmount: 
-  senderImageName: 
-  receiverImageName: 
-  receiveIDWhoSentGold: 0
-  senderImageTemp: {fileID: 0}
-  receiverImageTemp: {fileID: 0}
-  isImSender: 0
 --- !u!1 &1707641774
 GameObject:
   m_ObjectHideFlags: 0
@@ -124890,7 +124880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604ee728f353b304491694120a2f306d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trans: 0
 --- !u!1 &1783328121
 GameObject:
   m_ObjectHideFlags: 0
@@ -142549,7 +142538,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2060551957}
   m_OnClick:
     m_PersistentCalls:
@@ -142648,15 +142637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d327ad612bc2f43aa20cb50aa212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  historyBox: {fileID: 0}
-  noMoreHistory: {fileID: 0}
-  EmailHistoryItem: {fileID: 0}
-  DateAtTitle: {fileID: 0}
-  HistoryEmailDetail: {fileID: 0}
-  GoldAmount: {fileID: 0}
-  HistoryEmailreadFullpanel: {fileID: 0}
-  EmailHistoryDeletePlayerID: 0
-  EmailHistroyList: []
 --- !u!1 &2063330787
 GameObject:
   m_ObjectHideFlags: 0
@@ -147833,32 +147813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7260c6a503a06c7418d5ef98a5e492d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PendingStatustxt: {fileID: 0}
-  ReceiverNameTxt: {fileID: 0}
-  ReceiverIDTxt: {fileID: 0}
-  ReceiverAmountTxt: {fileID: 0}
-  DateAndTimeTxt: {fileID: 0}
-  ReceiverImage: {fileID: 0}
-  reCallIcon: {fileID: 0}
-  ResendSprite: {fileID: 0}
-  recallSprite: {fileID: 0}
-  Colors: []
-  status: 
-  playerName: 
-  PlayerID: 
-  sentAmount: 
-  cancelIDToGetBackGold: 0
-  senderName: 
-  senderID: 
-  receiverName: 
-  receiverID: 
-  sentOrReceivedAmount: 
-  senderImageName: 
-  receiverImageName: 
-  receiveIDWhoSentGold: 0
-  senderImageTemp: {fileID: 0}
-  receiverImageTemp: {fileID: 0}
-  isImSender: 0
 --- !u!114 &13219716235050467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156840,7 +156794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -0.00000006469775, y: -0.0000007520218}
   m_AnchorMax: {x: 0.999999, y: 0.4313913}
-  m_AnchoredPosition: {x: 0, y: 1.3660278}
+  m_AnchoredPosition: {x: 0, y: 1.3660355}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8979211146297148114
