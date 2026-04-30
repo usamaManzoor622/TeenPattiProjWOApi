@@ -561,17 +561,17 @@ namespace com.mani.muzamil.amjad
 
         public void LogOut()
         {
-            switch (LoginWithAllAuth.AuthType)
-            {
-                case 2:
-                    GoogleAuth.Instance.GoogleSigout();
-                    break;
-                case 3:
-                    Facebookauth.Instance.FaceBook_LogOut();
-                    break;
+            //switch (LoginWithAllAuth.AuthType)
+            //{
+            //    case 2:
+            //        GoogleAuth.Instance.GoogleSigout();
+            //        break;
+            //    case 3:
+            //        Facebookauth.Instance.FaceBook_LogOut();
+            //        break;
 
-            }
-            GuestAuth.Instance.GuestSingOut();
+            //}
+            //GuestAuth.Instance.GuestSingOut();
         }
         public void GameQuit()
         {
