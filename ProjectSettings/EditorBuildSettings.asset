@@ -8,11 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/-MyGame/MyScenes/MainMenu.unity
     guid: 656084e224d0fb24facbd5f7f059dd03
+  - enabled: 1
+    path: Assets/-MyGame/MyScenes/TempScene2.unity
+    guid: 756b1299053e914498e51ee40ea9d201
   - enabled: 0
     path: Assets/-MyGame/MyScenes/Gameplay.unity
     guid: e61cf44b41b9ce8469a8e00666dc9d4b
-  - enabled: 1
-    path: Assets/-MyGame/MyScenes/AndarBahar.unity
-    guid: 2aa9e2055bd7b3a4ba25b5130748d49f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

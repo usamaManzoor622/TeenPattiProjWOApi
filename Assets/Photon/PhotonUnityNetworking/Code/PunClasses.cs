@@ -28,7 +28,6 @@ namespace Photon.Pun
     using System.Reflection;
     using ExitGames.Client.Photon;
     using UnityEngine;
-    using NetCodeMLAPI;
     using UnityEngine.SceneManagement;
     using Photon.Realtime;
     using SupportClassPun = ExitGames.Client.Photon.SupportClass;
@@ -886,7 +885,7 @@ namespace Photon.Pun
             if (wasActive) res.SetActive(false);
 
             GameObject instance =GameObject.Instantiate(res, position, rotation) as GameObject;
-            NetCode.CheckPlayerConnectivity();
+            //NetCode.CheckPlayerConnectivity();
             if (wasActive) res.SetActive(true);
             return instance;
         }

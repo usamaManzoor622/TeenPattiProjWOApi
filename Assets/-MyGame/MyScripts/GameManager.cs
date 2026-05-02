@@ -1,7 +1,7 @@
 using DG.Tweening;
 using Photon.Pun;
 using Photon.Realtime;
-using NetCodeMLAPI;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -599,8 +599,7 @@ namespace com.mani.muzamil.amjad
             StartCoroutine(CheckAllPlayersConnected());
             //Debug.Log("Other Player named " + otherPlayer.NickName + " left this Room");
             base.OnPlayerLeftRoom(otherPlayer);
-            NetCode.CheckPlayerConnectivity();
-
+            
         }
 
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
@@ -610,7 +609,7 @@ namespace com.mani.muzamil.amjad
             {
                 PositionsManager.Instance.AssignMyLocalPositionWithAllOtherClients();
                 Debug.Log("updated Network Position");
-                NetCode.CheckPlayerConnectivity();
+                
             }
         }
 

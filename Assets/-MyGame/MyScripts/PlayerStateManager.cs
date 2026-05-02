@@ -1,7 +1,6 @@
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections;
-using NetCodeMLAPI;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -573,7 +572,7 @@ namespace com.mani.muzamil.amjad
 
             if (!otherPlayer.IsMasterClient)
             {
-                NetCode.CheckPlayerConnectivity();
+                //NetCode.CheckPlayerConnectivity();
                 UpdateAllListsOnPlayerleft(otherPlayer.NickName);
                 if (MatchHandler.IsTeenPatti() || MatchHandler.IsPoker())
                     RemainingPlayerWonGameAutomatic();
