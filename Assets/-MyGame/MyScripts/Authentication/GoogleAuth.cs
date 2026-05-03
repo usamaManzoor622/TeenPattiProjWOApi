@@ -24,12 +24,17 @@ public class GoogleAuth : MonoBehaviour
     Firebase.Auth.FirebaseAuth auth;
     Firebase.Auth.FirebaseUser user;
     //  UI of Users
-    public TMP_Text userNameTxt, UserEmailTxt;
+    public TMP_Text userNameTxt, UserEmailTxt, googleText;
     public Image userProfilePic;
     public string imageUrl;
     public GameObject LoginScreen, profileScreen;
 
 
+
+    public void ShowGoogleMassage(string massage)
+    {
+        googleText.text = massage;
+        }
     string userName, TokenID, EmailAddress;
     #region Creating Instance
     private static GoogleAuth _instance;
@@ -69,7 +74,7 @@ public class GoogleAuth : MonoBehaviour
         GoogleSignIn.Configuration.UseGameSignIn = false;
         GoogleSignIn.Configuration.RequestIdToken = true;
         GoogleSignIn.Configuration.RequestEmail = true;
-
+        ShowGoogleMassage("Autencation Start .......");
         GoogleSignIn.DefaultInstance.SignIn().ContinueWith(OnGoogleAuthenticatedFinished);
     }
 
@@ -87,10 +92,12 @@ public class GoogleAuth : MonoBehaviour
         if (task.IsFaulted)
         {
             Debug.LogError("Fault");
+            ShowGoogleMassage("Fault .......");
         }
         else if (task.IsCanceled)
         {
             Debug.LogError("Login Cancel");
+            ShowGoogleMassage("Login Cancel .......");
         }
         else
         {
@@ -101,11 +108,13 @@ public class GoogleAuth : MonoBehaviour
                 if (task.IsCanceled)
                 {
                     Debug.LogError("SignInWithCredentialAsync was canceled.");
+                    ShowGoogleMassage("SignInWithCredentialAsync was canceled.");
                     return;
                 }
                 if (task.IsFaulted)
                 {
                     Debug.LogError("SignInWithCredentialAsync ecountered as error: " + task.Exception);
+                    ShowGoogleMassage("SignInWithCredentialAsync ecountered as error: " + task.Exception);
                     return;
                 }
 
@@ -119,7 +128,7 @@ public class GoogleAuth : MonoBehaviour
                 userNameTxt.text = user.DisplayName;
                 UserEmailTxt.text = user.UserId;
 
-
+                ShowGoogleMassage("Authentication Sucessfully");
                 LoginScreen.SetActive(false);
                 profileScreen.SetActive(true);
 
@@ -134,19 +143,22 @@ public class GoogleAuth : MonoBehaviour
         if (!string.IsNullOrEmpty(url))
         {
             Debug.LogError("cehck Your url" + url);
+            ShowGoogleMassage("cehck Your url" + url);
             return url;
         }
         Debug.LogError("cehck Your url" + imageUrl);
+        ShowGoogleMassage("cehck Your url" + imageUrl);
         return imageUrl;
     }
 
     IEnumerator LoadImage(string imageUrl)
     {
         WWW wWW = new WWW(imageUrl);
+        ShowGoogleMassage("wait for url of image");
         yield return wWW;
 
         userProfilePic.sprite = Sprite.Create(wWW.texture, new Rect(0, 0, wWW.texture.width, wWW.texture.height), new Vector2(0, 0));
-
+        ShowGoogleMassage("picture implementation Successfully");
         LoginWithAllAuth.Instance.GetTokenIDAndOtherThing(2, TokenID, EmailAddress, userName, userProfilePic);
     }
 

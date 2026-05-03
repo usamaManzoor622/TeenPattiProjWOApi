@@ -84,6 +84,7 @@ public class LoginWithAllAuth : MonoBehaviour
     public void GetTokenIDAndOtherThing(int AuthTypeScr, string TokenIdFromAuth, string EmailIdSrc, string UserNameSrc, Image UserProfilePicSrc)
     {
         ProgressTxt.text = "Authenticating User...";
+        GoogleAuth.Instance.ShowGoogleMassage("Authenticating User...");
         if (UserNameSrc != "" && UserNameSrc != null)
             UserName = UserNameSrc;
         AuthType = AuthTypeScr;
@@ -116,7 +117,12 @@ public class LoginWithAllAuth : MonoBehaviour
                 if (UserNameSrc != "")
                     UserName = UserNameSrc;
                 if (UserProfilePicSrc != null)
+                {
+
                     ProfilePic = UserProfilePicSrc;
+                }
+
+                GoogleAuth.Instance.ShowGoogleMassage("bhai sb");
                 AuthenticateUser();
                 break;
             case 3:
@@ -149,6 +155,7 @@ public class LoginWithAllAuth : MonoBehaviour
                 break;
             case 2:
                 // Google
+                GoogleAuth.Instance.ShowGoogleMassage("after calling Google auth ");
                 GetDataFromRestAPI();
                 break;
             case 3:
@@ -175,11 +182,13 @@ public class LoginWithAllAuth : MonoBehaviour
     public void GetDataFromRestAPI()
     {
         Debug.LogError("<color=yellow>API Called ____________________________</color>");
+        GoogleAuth.Instance.ShowGoogleMassage("<color=yellow>API Called ____________________________</color>");
         if (ProfilePic != null)
             Picc.sprite = ProfilePic.sprite;
         else
             Picc.sprite = UpdateAvatar.Instance.AvatorSpritesSquare.Sprites[0].Sprites;
         Image ReadyProfileImage = Picc;
+
         AuthPanel.SetActive(false);
         WaitPanel.SetActive(false);
     }
